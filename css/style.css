@@ -5,9 +5,10 @@
     --primario: #ffc107; 
     --secundario: #0097a7;
     --gris: #757575;
-
-    --fuentePrincipal: 3.8rem;
+    --grisClaro: #dfe9f3;
 }
+
+/* Globales */
 
 html {
     font-size: 62.5%;
@@ -23,23 +24,76 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-family: 'PT Sans', sans-serif;
-}
-
-.titulo {
-  text-align: center;
-  font-size: var(--fuentePrincipal);
-
-}
-
-.titulo span {
-    font-size: 2rem;
+    background-image: linear-gradient( to top, var(--grisClaro) 0%, var(--blanco) 100% );
 }
 
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
-
 }
+
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    width: 85%;
+    text-align: center;
+}
+
+@media (min-width: 480px) {
+    .boton {
+        width: auto;
+    }
+}
+
+.sombra {
+    -webkit-box-shadow: 4px 5px 8px 0px rgba(77,77,77,1);
+    -moz-box-shadow: 4px 5px 8px 0px rgba(77,77,77,1);
+    box-shadow: 4px 5px 8px 0px rgba(77,77,77,1);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+
+/* Tipografia */
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Titulos */
+
+.titulo span {
+    font-size: 2rem;
+}
+
+/* Navegacion Principal */
 
 .nav-bg {
     background-color: var(--secundario);
@@ -78,5 +132,35 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
-    padding: 100px;
+    /* padding: 20px; */
+    position: relative;
+    margin-bottom: 2rem;
 }
+
+.contenido-hero {
+    position: absolute;
+    /* background-color: rgba(0,0,0,.6); SIntaxis anterior */
+    background-color: rgb(0 0 0 / 60%);
+    width: 2rem;
+    height: 2rem;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2, .contenido-hero p {
+    color: var(--blanco);
+}
+
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Degradado */
+
+
