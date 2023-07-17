@@ -17,7 +17,12 @@ html {
   scroll-snap-type: y mandatory;
 }
 
-.navegacion-principal, .contenedor, .formulario {
+header, .navegacion-principal {
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.contenedor, .formulario {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
